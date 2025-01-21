@@ -7,10 +7,6 @@ import { FormControl } from '@angular/forms';
   standalone: false,
 })
 export class HomePage {
-  pendientes = new FormControl('');
-  fecha = new FormControl('');
-  items: any = [];
-
   agregar() {
     if (this.pendientes.value && this.fecha.value) {
       this.items.push({ pendientes: this.pendientes.value, fecha: this.fecha.value });
@@ -19,6 +15,10 @@ export class HomePage {
     }
   }
 
+
   constructor() { }
+  pendientes = new FormControl('');
+  fecha = new FormControl('');
+  items: any = [];
 
 }
