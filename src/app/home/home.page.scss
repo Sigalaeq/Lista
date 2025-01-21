@@ -8,6 +8,38 @@
   transform: translateY(-50%);
 }
 
+body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+}
+
+#container {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+#container h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#container button:hover {
+  background-color: #0056b3;
+}
+
 #container strong {
   font-size: 20px;
   line-height: 26px;

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,7 +7,18 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class HomePage {
+  pendientes = new FormControl('');
+  fecha = new FormControl('');
+  items: any = [];
 
-  constructor() {}
+  agregar() {
+    if (this.pendientes.value && this.fecha.value) {
+      this.items.push({ pendientes: this.pendientes.value, fecha: this.fecha.value });
+      this.pendientes.setValue('');
+      this.fecha.setValue('');
+    }
+  }
+
+  constructor() { }
 
 }
